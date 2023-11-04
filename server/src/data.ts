@@ -1,0 +1,53 @@
+import { Product } from "./types/Product";
+
+
+export const sampleProducts: Product[] = [
+    {
+        name: 'Nike Slim shirt',
+        slug: 'nike-slim-shirt',
+        category: 'Shirts',
+        image: 'https://www.sportsdirect.com/images/imgzoom/34/34335203_xxl.jpg',
+        price: 120,
+        countInStock: 10,
+        brand: 'Nike',
+        rating: 4.5,
+        numReviews: 10,
+        description: 'high quality shirt',
+    },
+    {
+        name: 'Adidas Fit Shirt',
+        slug: 'adidas-fit-shirt',
+        category: 'Shirts',
+        image: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/499400378423403ebc1faebb0157f55a_9366/BRANDLOVE_TEE_White_HT3391_21_model.jpg',
+        price: 100,
+        countInStock: 20,
+        brand: 'Adidas',
+        rating: 4.0,
+        numReviews: 10,
+        description: 'high quality product',
+    },
+    {
+        name: 'Lacoste Free Pants',
+        slug: 'lacoste-free-pants',
+        category: 'Pants',
+        image: 'https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-GB-Site/Sites-master/en/dwacfe2da8/HH5597_CB8_24.jpg?imwidth=915&impolicy=product',
+        price: 220,
+        countInStock: 0,
+        brand: 'Lacoste',
+        rating: 4.8,
+        numReviews: 17,
+        description: 'high quality product',
+    },
+    {
+        name: 'Nike Slim Pant',
+        slug: 'nike-slim-pant',
+        category: 'Pants',
+        image: 'https://static.nike.com/a/images/t_default/0d676e6f-16e8-43d4-9165-bacf7b622fae/dri-fit-uv-mens-slim-fit-golf-chino-pants-8Bktzc.png',
+        price: 78,
+        countInStock: 15,
+        brand: 'Nike',
+        rating: 4.5,
+        numReviews: 14,
+        description: 'high quality product',
+    },
+]
