@@ -9,7 +9,6 @@ export const ProductItem = ({ product }: { product: Product }) => {
             <Link to={'/product/' + product.slug}>
                 <img src={product.image} alt={product.name}
                     className='card-img-top' />
-
             </Link>
             <Card.Body>
                 <Link to={'/product/' + product.slug}>
