@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useGetProductDetailsBySlugQuery } from "../hooks/productHooks";
+import { Row, Col, ListGroup, Card, Badge, Button } from "react-bootstrap";
 import { LoadingBox } from "../components/LoadingBox";
 import { MessageBox } from "../components/MessageBox";
 import { ApiError } from "../types/ApiError";
 import { getError } from "../utils";
-import { Row, Col, ListGroup, Card, Badge, Button } from "react-bootstrap";
 import { Rating } from "../components/Rating";
 
 export const ProductPage = () => {
@@ -16,7 +16,7 @@ export const ProductPage = () => {
         isLoading ? (<LoadingBox />) : error ?
             (<MessageBox variant="danger">{getError(error as unknown as ApiError)}</MessageBox>) :
             <Row>
-                <Col md={6}><img className="large" src={product?.image} alt={product?.name} /> </Col>
+                <Col md={6}><img height={'250px'} className="small" src={product?.image} alt={product?.name} /> </Col>
                 <Col md={3}>
                     <ListGroup variant="flush">
                         <ListGroup.Item>
@@ -26,10 +26,10 @@ export const ProductPage = () => {
                             <Rating rating={product!.rating} numReviews={product?.numReviews} />
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            Price: ${product?.price}
+                            <b> Price:</b> ${product?.price}
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            Description: ${product?.description}
+                            <b>Description:</b> {product?.description}
                         </ListGroup.Item>
                     </ListGroup>
 
@@ -40,13 +40,13 @@ export const ProductPage = () => {
                             <ListGroup variant="flush">
                                 <ListGroup.Item>
                                     <Row>
-                                        <Col>Price:</Col>
-                                        <Col>${product?.price}</Col>
+                                        <Col><b>Price:</b></Col>
+                                        <Col><b>${product?.price}</b></Col>
                                     </Row>
                                 </ListGroup.Item>
                                 <ListGroup.Item>
                                     <Row>
-                                        <Col>Status:</Col>
+                                        <Col><b>Status:</b></Col>
                                         <Col>{product!.countInStock > 0 ? (
                                             <Badge bg="success">In Stock</Badge>
                                         ) : (
