@@ -7,7 +7,7 @@ import { HomePage } from './pages/HomePage.tsx'
 import { ProductPage } from './pages/ProductPage.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { ThemeProvider } from './context/ThemeContext.tsx'
+import { AppProvider } from './context/AppContext.tsx'
 import App from './App.tsx'
 
 const router = createBrowserRouter(
@@ -21,13 +21,13 @@ const router = createBrowserRouter(
 const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ThemeProvider >
+    <AppProvider >
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
           <RouterProvider router={router} />
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </HelmetProvider>
-    </ThemeProvider>
+    </AppProvider>
   </React.StrictMode>
 )
