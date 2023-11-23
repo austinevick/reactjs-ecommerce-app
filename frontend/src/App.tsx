@@ -1,10 +1,10 @@
 import { useContext, useEffect } from 'react'
 import { Badge, Button, Container, Nav, Navbar } from 'react-bootstrap'
 import { Link, Outlet } from 'react-router-dom'
-import { ThemeContext } from './context/AppContext'
+import { AppContext } from './context/AppContext'
 
 function App() {
-  const { state: { mode, cart }, dispatch } = useContext(ThemeContext)
+  const { state: { mode, cart }, dispatch } = useContext(AppContext)
 
   useEffect(() => {
     document.body.setAttribute('data-bs-theme', mode)
